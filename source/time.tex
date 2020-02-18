@@ -6025,6 +6025,14 @@ constexpr year_month& operator+=(const months& dm) noexcept;
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \effects
 \tcode{*this = *this + dm}.
 
@@ -6039,6 +6047,14 @@ constexpr year_month& operator-=(const months& dm) noexcept;
 \end{itemdecl}
 
 \begin{itemdescr}
+\pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
 \pnum
 \effects
 \tcode{*this = *this - dm}.
@@ -6124,6 +6140,14 @@ constexpr year_month operator+(const year_month& ym, const months& dm) noexcept;
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \returns
 A \tcode{year_month} value \tcode{z} such that \tcode{z.ok() \&\& z - ym == dm}
 is \tcode{true}.
@@ -6140,6 +6164,14 @@ constexpr year_month operator+(const months& dm, const year_month& ym) noexcept;
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \returns
 \tcode{ym + dm}.
 \end{itemdescr}
@@ -6150,6 +6182,14 @@ constexpr year_month operator-(const year_month& ym, const months& dm) noexcept;
 \end{itemdecl}
 
 \begin{itemdescr}
+\pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
 \pnum
 \returns
 \tcode{ym + -dm}.
@@ -6372,6 +6412,14 @@ constexpr year_month_day& operator+=(const months& m) noexcept;
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \effects
 \tcode{*this = *this + m}.
 
@@ -6386,6 +6434,14 @@ constexpr year_month_day& operator-=(const months& m) noexcept;
 \end{itemdecl}
 
 \begin{itemdescr}
+\pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
 \pnum
 \effects
 \tcode{*this = *this - m}.
@@ -6551,6 +6607,14 @@ constexpr year_month_day operator+(const year_month_day& ymd, const months& dm) 
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \returns
 \tcode{(ymd.year() / ymd.month() + dm) / ymd.day()}.
 
@@ -6569,6 +6633,14 @@ constexpr year_month_day operator+(const months& dm, const year_month_day& ymd) 
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \returns
 \tcode{ymd + dm}.
 \end{itemdescr}
@@ -6579,6 +6651,14 @@ constexpr year_month_day operator-(const year_month_day& ymd, const months& dm) 
 \end{itemdecl}
 
 \begin{itemdescr}
+\pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
 \pnum
 \returns
 \tcode{ymd + (-dm)}.
@@ -6741,6 +6821,14 @@ constexpr year_month_day_last& operator+=(const months& m) noexcept;
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \effects
 \tcode{*this = *this + m}.
 
@@ -6755,6 +6843,14 @@ constexpr year_month_day_last& operator-=(const months& m) noexcept;
 \end{itemdecl}
 
 \begin{itemdescr}
+\pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
 \pnum
 \effects
 \tcode{*this = *this - m}.
@@ -6917,6 +7013,14 @@ constexpr year_month_day_last
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \returns
 \tcode{(ymdl.year() / ymdl.month() + dm) / last}.
 \end{itemdescr}
@@ -6929,6 +7033,14 @@ constexpr year_month_day_last
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \returns
 \tcode{ymdl + dm}.
 \end{itemdescr}
@@ -6940,6 +7052,14 @@ constexpr year_month_day_last
 \end{itemdecl}
 
 \begin{itemdescr}
+\pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
 \pnum
 \returns
 \tcode{ymdl + (-dm)}.
@@ -7100,6 +7220,14 @@ constexpr year_month_weekday& operator+=(const months& m) noexcept;
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \effects
 \tcode{*this = *this + m}.
 
@@ -7114,6 +7242,14 @@ constexpr year_month_weekday& operator-=(const months& m) noexcept;
 \end{itemdecl}
 
 \begin{itemdescr}
+\pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
 \pnum
 \effects
 \tcode{*this = *this - m}.
@@ -7278,6 +7414,14 @@ constexpr year_month_weekday operator+(const year_month_weekday& ymwd, const mon
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \returns
 \tcode{(ymwd.year() / ymwd.month() + dm) / ymwd.weekday_indexed()}.
 \end{itemdescr}
@@ -7289,6 +7433,14 @@ constexpr year_month_weekday operator+(const months& dm, const year_month_weekda
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \returns
 \tcode{ymwd + dm}.
 \end{itemdescr}
@@ -7299,6 +7451,14 @@ constexpr year_month_weekday operator-(const year_month_weekday& ymwd, const mon
 \end{itemdecl}
 
 \begin{itemdescr}
+\pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
 \pnum
 \returns
 \tcode{ymwd + (-dm)}.
@@ -7424,6 +7584,14 @@ constexpr year_month_weekday_last& operator+=(const months& m) noexcept;
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \effects
 \tcode{*this = *this + m}.
 
@@ -7438,6 +7606,14 @@ constexpr year_month_weekday_last& operator-=(const months& m) noexcept;
 \end{itemdecl}
 
 \begin{itemdescr}
+\pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
 \pnum
 \effects
 \tcode{*this = *this - m}.
@@ -7581,6 +7757,14 @@ constexpr year_month_weekday_last
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \returns
 \tcode{(ymwdl.year() / ymwdl.month() + dm) / ymwdl.weekday_last()}.
 \end{itemdescr}
@@ -7593,6 +7777,14 @@ constexpr year_month_weekday_last
 
 \begin{itemdescr}
 \pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
+\pnum
 \returns
 \tcode{ymwdl + dm}.
 \end{itemdescr}
@@ -7604,6 +7796,14 @@ constexpr year_month_weekday_last
 \end{itemdecl}
 
 \begin{itemdescr}
+\pnum
+\constraints
+If the argument supplied by the caller for the \tcode{months} parameter
+is convertible to \tcode{years},
+its implicit conversion sequence to \tcode{years}
+is worse than its implicit conversion sequence to
+\tcode{months}\iref{over.ics.rank}.
+
 \pnum
 \returns
 \tcode{ymwdl + (-dm)}.
