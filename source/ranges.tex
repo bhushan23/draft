@@ -3022,6 +3022,8 @@ namespace std::ranges {
     constexpr V base() const& requires copy_constructible<V> { return @\exposid{base_}@; }
     constexpr V base() && { return std::move(@\exposid{base_}@); }
 
+    constexpr const Pred& pred() const;
+
     constexpr @\exposid{iterator}@ begin();
     constexpr auto end() {
       if constexpr (common_range<V>)
@@ -3060,6 +3062,17 @@ constexpr filter_view(R&& r, Pred pred);
 \effects
 Initializes \exposid{base_} with \tcode{views::all(std::forward<R>(r))}
 and initializes \exposid{pred_} with \tcode{std::\brk{}move(pred)}.
+\end{itemdescr}
+
+\indexlibrarymember{pred}{filter_view}%
+\begin{itemdecl}
+constexpr const Pred& pred() const;
+\end{itemdecl}
+
+\begin{itemdescr}
+\pnum
+\effects
+Equivalent to: \tcode{return *pred_;}
 \end{itemdescr}
 
 \indexlibrarymember{begin}{filter_view}%
@@ -5353,7 +5366,7 @@ namespace std::ranges {
     constexpr @\exposid{outer-iterator}@(@\exposid{Parent}@& parent, iterator_t<@\exposid{Base}@> current)
       requires forward_range<@\exposid{Base}@>;
     constexpr @\exposid{outer-iterator}@(@\exposid{outer-iterator}@<!Const> i)
-      requires Const && convertible_to<iterator_t<V>, iterator_t<const V>>;
+      requires Const && convertible_to<iterator_t<V>, iterator_t<Base>>;
 
     constexpr value_type operator*() const;
 
@@ -5409,7 +5422,7 @@ and \exposid{current_} with \tcode{std::move(current)}.
 \indexlibraryctor{split_view::outer-iterator}%
 \begin{itemdecl}
 constexpr @\exposid{outer-iterator}@(@\exposid{outer-iterator}@<!Const> i)
-  requires Const && convertible_to<iterator_t<V>, iterator_t<const V>>;
+  requires Const && convertible_to<iterator_t<V>, iterator_t<Base>>;
 \end{itemdecl}
 
 \begin{itemdescr}
